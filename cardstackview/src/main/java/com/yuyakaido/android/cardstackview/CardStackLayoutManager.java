@@ -26,6 +26,7 @@ public class CardStackLayoutManager
     private CardStackListener listener = CardStackListener.DEFAULT;
     private CardStackSetting setting = new CardStackSetting();
     private CardStackState state = new CardStackState();
+    private float mOverlayMultiplier = 1f;
 
     public CardStackLayoutManager(Context context) {
         this(context, CardStackListener.DEFAULT);
@@ -340,22 +341,22 @@ public class CardStackLayoutManager
         switch (direction) {
             case Left:
                 if (leftOverlay != null) {
-                    leftOverlay.setAlpha(state.getRatio());
+                    leftOverlay.setAlpha(state.getRatio() * mOverlayMultiplier);
                 }
                 break;
             case Right:
                 if (rightOverlay != null) {
-                    rightOverlay.setAlpha(state.getRatio());
+                    rightOverlay.setAlpha(state.getRatio() * mOverlayMultiplier);
                 }
                 break;
             case Top:
                 if (topOverlay != null) {
-                    topOverlay.setAlpha(state.getRatio());
+                    topOverlay.setAlpha(state.getRatio() * mOverlayMultiplier);
                 }
                 break;
             case Bottom:
                 if (bottomOverlay != null) {
-                    bottomOverlay.setAlpha(state.getRatio());
+                    bottomOverlay.setAlpha(state.getRatio() * mOverlayMultiplier);
                 }
                 break;
         }
@@ -472,4 +473,11 @@ public class CardStackLayoutManager
         setting.rewindAnimationSetting = rewindAnimationSetting;
     }
 
+    public void setOverlayMultiplier(@FloatRange(from = 0.0f, to = 1.0f) float multiplier) {
+        mOverlayMultiplier = multiplier;
+    }
+
+    public float getOverlayMultiplier() {
+        return mOverlayMultiplier;
+    }
 }
