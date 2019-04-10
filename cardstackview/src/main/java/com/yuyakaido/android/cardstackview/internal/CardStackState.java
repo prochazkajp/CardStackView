@@ -1,10 +1,11 @@
 package com.yuyakaido.android.cardstackview.internal;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
 
 import com.yuyakaido.android.cardstackview.Direction;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CardStackState {
     public SparseArray<View> cache = new SparseArray<>();

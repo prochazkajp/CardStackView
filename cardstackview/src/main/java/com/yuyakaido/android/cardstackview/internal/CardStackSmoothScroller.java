@@ -1,11 +1,12 @@
 package com.yuyakaido.android.cardstackview.internal;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
 import com.yuyakaido.android.cardstackview.CardStackListener;
 import com.yuyakaido.android.cardstackview.RewindAnimationSetting;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CardStackSmoothScroller extends RecyclerView.SmoothScroller {
 

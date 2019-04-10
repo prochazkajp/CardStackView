@@ -1,12 +1,13 @@
 package com.yuyakaido.android.cardstackview;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import com.yuyakaido.android.cardstackview.internal.CardStackSnapHelper;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CardStackView extends RecyclerView {
 

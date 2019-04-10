@@ -1,8 +1,8 @@
 package com.yuyakaido.android.cardstackview.sample;
 
-import android.support.v7.util.DiffUtil;
-
 import java.util.List;
+
+import androidx.recyclerview.widget.DiffUtil;
 
 public class SpotDiffCallback extends DiffUtil.Callback {
 
